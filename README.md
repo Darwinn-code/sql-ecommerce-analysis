@@ -232,7 +232,9 @@ VALUES
 (199, 'Glitter Glue Pens Set of 10', 'Stationeries & Hobbies', 16000, 28000),
 (200, 'Leather Journal Retro Strap', 'Stationeries & Hobbies', 65000, 115000);
 
-## Part 3: Advanced Business Analysis
+-- ===================================================
+-- Part 3: Advanced Business Analysis
+-- ===================================================
 
 In this section, I act as a Data Analyst to solve business problems and find the most profitable products using Advanced SQL techniques.
 
