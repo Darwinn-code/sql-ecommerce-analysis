@@ -1,5 +1,4 @@
-### 1. Database Setup
-Gunakan blok kode di bawah ini untuk membuat database dan tabel:
+
 
 ```sql
 -- ===================================================
