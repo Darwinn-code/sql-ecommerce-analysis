@@ -16,8 +16,6 @@ CREATE TABLE Online_Product_Store (
     selling_price INT
 );
 
-
-```sql
 -- ===================================================
 -- PART 2: POPULATING THE DATA (DML) - 200 PRODUCTS
 -- ===================================================
@@ -232,4 +230,5 @@ VALUES
 (197, 'Craft Paper Scissors Wave 6pc', 'Stationeries & Hobbies', 25000, 44000),
 (198, 'B6 Pocket Dotted Notebook', 'Stationeries & Hobbies', 14000, 24000),
 (199, 'Glitter Glue Pens Set of 10', 'Stationeries & Hobbies', 16000, 28000),
-(200, 'Leather Journal Retro Strap', 'Stationeries & Hobbies', 65000, 115000);
+(200, 'Leather Journal Retro Strap', 'Stationeries & Hobbies', 65000, 115000)
+);
