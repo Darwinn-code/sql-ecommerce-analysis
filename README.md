@@ -241,7 +241,6 @@ In this section, I act as a Data Analyst to solve business problems and find the
 ### 1. Subquery: Finding Products with Above-Average Selling Price
 Here, I use a Subquery in the `WHERE` clause to automatically filter products that are priced higher than the average selling price of the entire store.
 
-```sql
 SELECT product_name, category, selling_price
 FROM online_store_products
 WHERE selling_price > (SELECT AVG(selling_price) FROM online_store_products)
