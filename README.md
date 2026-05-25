@@ -231,3 +231,16 @@ VALUES
 (198, 'B6 Pocket Dotted Notebook', 'Stationeries & Hobbies', 14000, 24000),
 (199, 'Glitter Glue Pens Set of 10', 'Stationeries & Hobbies', 16000, 28000),
 (200, 'Leather Journal Retro Strap', 'Stationeries & Hobbies', 65000, 115000);
+
+## Part 3: Advanced Business Analysis
+
+In this section, I act as a Data Analyst to solve business problems and find the most profitable products using Advanced SQL techniques.
+
+### 1. Subquery: Finding Products with Above-Average Selling Price
+Here, I use a Subquery in the `WHERE` clause to automatically filter products that are priced higher than the average selling price of the entire store.
+
+```sql
+SELECT product_name, category, selling_price
+FROM online_store_products
+WHERE selling_price > (SELECT AVG(selling_price) FROM online_store_products)
+ORDER BY selling_price DESC;
