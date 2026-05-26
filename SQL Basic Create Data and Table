@@ -1,0 +1,81 @@
+
+
+```sql
+-- ===================================================
+-- PART 1: DATABASE & TABLE CREATION (DDL)
+-- ===================================================
+
+CREATE DATABASE retail_store_db;
+USE retail_store_db;
+
+CREATE TABLE Online_Product_Store (
+    product_id INT PRIMARY KEY,
+    product_name VARCHAR(100),
+    category VARCHAR(50),
+    cost_price INT,
+    selling_price INT
+);
+
+-- ===================================================
+-- PART 2: POPULATING THE DATA (DML) - 200 PRODUCTS
+-- ===================================================
+
+INSERT INTO online_store_products (product_id, product_name, category, cost_price, selling_price)
+VALUES 
+-- --- KATEGORI 1: FASHION & ACCESSORIES (1 - 40) ---
+(1, 'Oversized Black T-Shirt', 'Fashion & Accessories', 45000, 75000),
+(2, 'White Casual Sneakers', 'Fashion & Accessories', 120000, 195000),
+(3, 'Canvas Tote Bag', 'Fashion & Accessories', 20000, 35000),
+(4, 'Leather Minimalist Wallet', 'Fashion & Accessories', 60000, 110000),
+(5, 'Bucket Hat Unisex', 'Fashion & Accessories', 15000, 29000),
+(6, 'High-waisted Loose Jeans', 'Fashion & Accessories', 85000, 145000),
+(7, 'Knitted Cardigan', 'Fashion & Accessories', 70000, 115000),
+(8, 'Ankle Socks Pack of 5', 'Fashion & Accessories', 18000, 30000),
+(9, 'Waterproof Windbreaker Jacket', 'Fashion & Accessories', 110000, 185000),
+(10, 'Premium Chino Pants', 'Fashion & Accessories', 90000, 150000),
+(11, 'Corduroy Shoulder Bag', 'Fashion & Accessories', 35000, 59000),
+(12, 'Sunglasses Retro Oval', 'Fashion & Accessories', 12000, 25000),
+(13, 'Stainless Steel Ring Set', 'Fashion & Accessories', 8000, 19000),
+(14, 'Pleated Skirt', 'Fashion & Accessories', 55000, 89000),
+(15, 'Silk Hair Scrunchies', 'Fashion & Accessories', 3000, 10000),
+(16, 'Bomber Jacket Classic', 'Fashion & Accessories', 130000, 210000),
+(17, 'Leather Waist Belt', 'Fashion & Accessories', 25000, 45000),
+(18, 'Linen Short Pants', 'Fashion & Accessories', 40000, 69000),
+(19, 'Oversized Flannel Shirt', 'Fashion & Accessories', 65000, 105000),
+(20, 'Casual Slip-on Sandals', 'Fashion & Accessories', 30000, 55000),
+(21, 'Denim Jacket Lightwash', 'Fashion & Accessories', 125000, 199000),
+(22, 'Running Shoes Sporty', 'Fashion & Accessories', 150000, 245000),
+(23, 'Leather Crossbody Bag', 'Fashion & Accessories', 95000, 165000),
+(24, 'Beanie Hat Winter', 'Fashion & Accessories', 15000, 28000),
+(25, 'Slim Fit Black Blazer', 'Fashion & Accessories', 140000, 225000),
+(26, 'Cargo Pants Olive', 'Fashion & Accessories', 95000, 155000),
+(27, 'Graphic Tee Vintage', 'Fashion & Accessories', 45000, 79000),
+(28, 'Hoop Earrings Gold Plated', 'Fashion & Accessories', 10000, 25000),
+(29, 'Baseball Cap Embroidered', 'Fashion & Accessories', 20000, 39000),
+(30, 'Bohemian Maxi Dress', 'Fashion & Accessories', 80000, 135000),
+(31, 'Polarized Sports Sunglasses', 'Fashion & Accessories', 40000, 75000),
+(32, 'Silky Pajamas Set', 'Fashion & Accessories', 70000, 119000),
+(33, 'Chelsea Boots Faux Leather', 'Fashion & Accessories', 180000, 295000),
+(34, 'Woven Straw Beach Bag', 'Fashion & Accessories', 45000, 79000),
+(35, 'Stainless Steel Watch Silver', 'Fashion & Accessories', 150000, 275000),
+(36, 'Trackpants Athletic Fit', 'Fashion & Accessories', 50000, 85000),
+(37, 'Hoodie Pullover Plain', 'Fashion & Accessories', 80000, 130000),
+(38, 'Leather Key Organizer', 'Fashion & Accessories', 15000, 29000),
+(39, 'Knit Scarf Cozy Style', 'Fashion & Accessories', 25000, 45000),
+(40, 'Leather Backpack Unisex', 'Fashion & Accessories', 160000, 260000),
+
+-- ===================================================
+-- Part 3: Advanced Business Analysis
+-- ===================================================
+
+In this section, I act as a Data Analyst to solve business problems and find the most profitable products using Advanced SQL techniques.
+
+### 1. Subquery: Finding Products with Above-Average Selling Price
+Here, I use a Subquery in the `WHERE` clause to automatically filter products that are priced higher than the average selling price of the entire store.
+
+SELECT product_name, category, selling_price
+FROM online_store_products
+WHERE selling_price > (SELECT AVG(selling_price) FROM online_store_products)
+ORDER BY selling_price DESC;
+
+
