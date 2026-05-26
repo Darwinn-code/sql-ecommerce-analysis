@@ -64,18 +64,3 @@ VALUES
 (39, 'Knit Scarf Cozy Style', 'Fashion & Accessories', 25000, 45000),
 (40, 'Leather Backpack Unisex', 'Fashion & Accessories', 160000, 260000),
 
--- ===================================================
--- Part 3: Advanced Business Analysis
--- ===================================================
-
-In this section, I act as a Data Analyst to solve business problems and find the most profitable products using Advanced SQL techniques.
-
-### 1. Subquery: Finding Products with Above-Average Selling Price
-Here, I use a Subquery in the `WHERE` clause to automatically filter products that are priced higher than the average selling price of the entire store.
-
-SELECT product_name, category, selling_price
-FROM online_store_products
-WHERE selling_price > (SELECT AVG(selling_price) FROM online_store_products)
-ORDER BY selling_price DESC;
-
-
