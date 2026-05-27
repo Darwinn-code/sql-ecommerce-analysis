@@ -20,6 +20,9 @@ CREATE TABLE Online_Product_Store (
 -- PART 2: POPULATING THE DATA (DML) - 200 PRODUCTS
 -- ===================================================
 
+<details>
+<summary><b>Click here to view the full 200 INSERT INTO rows</b></summary>
+
 INSERT INTO online_store_products (product_id, product_name, category, cost_price, selling_price)
 VALUES 
 -- --- CATEGORY 1: FASHION & ACCESSORIES (1 - 40) ---
