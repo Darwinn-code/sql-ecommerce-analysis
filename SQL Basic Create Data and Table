@@ -24,7 +24,7 @@ CREATE TABLE Online_Product_Store (
 <summary><b>Click here to view the full 200 INSERT INTO rows</b></summary>
 
 INSERT INTO online_store_products (product_id, product_name, category, cost_price, selling_price)
-VALUES 
+VALUES
 -- --- CATEGORY 1: FASHION & ACCESSORIES (1 - 40) ---
 (1, 'Oversized Black T-Shirt', 'Fashion & Accessories', 45000, 75000),
 (2, 'White Casual Sneakers', 'Fashion & Accessories', 120000, 195000),
