@@ -233,3 +233,18 @@ VALUES
 (198, 'B6 Pocket Dotted Notebook', 'Stationeries & Hobbies', 14000, 24000),
 (199, 'Glitter Glue Pens Set of 10', 'Stationeries & Hobbies', 16000, 28000),
 (200, 'Leather Journal Retro Strap', 'Stationeries & Hobbies', 65000, 115000);
+
+---
+
+## Part 3: Advanced Business Analysis
+
+Pada bagian ini, saya menjalankan beberapa skenario kueri SQL tingkat lanjut untuk menggali informasi berharga (*insight*) dari data produk yang tersedia.
+
+### 1. Subquery: Mencari Produk dengan Harga Jual di Atas Rata-rata
+Kueri ini menggunakan *Subquery* di dalam klausa `WHERE` untuk memfilter produk secara dinamis yang harga jualnya lebih tinggi daripada rata-rata harga seluruh toko.
+
+```sql
+SELECT product_name, category, selling_price
+FROM online_store_products
+WHERE selling_price > (SELECT AVG(selling_price) FROM online_store_products)
+ORDER BY selling_price DESC;
